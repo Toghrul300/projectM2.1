@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+    <link rel="stylesheet" type="text/css" href="index.css" />
+  </head>
+
+  <body>
+    <div class="esc-div">
+        <form name=savingscalc method=POST>
+        <p>What is your starting balance?<br>
+        
+            <input type=text onkeypress="return onlyNumbers(event)" name=balance size=10> <span class="esc-error" id="balanceError"></span></p>
+        
+            <p>What is the interest rate?<br>
+        <input type=text onkeypress="return onlyNumbers(event)" name=rate size=5> <span class="esc-error" id="rateError"></span></p>
+        
+        <p>How many years?<br>
+        <input type=text onkeypress="return onlyNumbers(event)" name=years size=5> <span class="esc-error" id="yearsError"></span></p>
+        
+        <input type=button onClick="return mySavings()" value=Calculate>  <input type=button onClick="return mySavingsReset()" value=Reset>
+        </form>
+        
+        <p class="esc-finalbalance" id="finalBalance"> </p>
+        </div>
+    <script type="text/javascript" src="index.js"></script>
+  </body>
+</html>
